@@ -1,0 +1,489 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Container
+/* 2. Menu
+/* 3. Header
+/* 4. Quem somos
+/* 5. Nossos cursos
+/* 6. Planos
+/* 7. Vantagens
+/* 8. Newsletter
+/* 9. Footer
+/**********************************/
+
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
+
+:root {
+  --clr-orange: #f7a100;
+  --clr-red: #f53c20;
+  --fonte: "Nunito", Helvetica, Arial, sans-serif;
+  --clr-light-orange: rgb(255, 131, 82);
+  --clr-1: #;
+}
+
+/**********************************/
+/* 2. Menu
+/**********************************/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+  font-family: var(--fonte);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  padding: 10px 0;
+  line-height: 21.82px;
+}
+
+/**********************************/
+/* 3. Header
+/**********************************/
+
+.cbc {
+  background: var(--clr-orange);
+}
+
+.cbc-c {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: auto;
+  align-items: center;
+}
+
+.cbc__logo p {
+  display: block;
+  width: 185px;
+  height: 40px;
+  background: black;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.cbc__lista {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.cbc__lista__item {
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.cbc__lista__item:hover {
+  background-color: rgba(255, 255, 255, 0.603);
+}
+
+@media screen and (max-width: 590px) {
+  .cbc-c {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4px;
+  }
+
+  .cbc__lista {
+    gap: 35px;
+  }
+}
+
+/**********************************/
+/* 4. Quem somos
+/**********************************/
+
+.opcao1__titulo1 {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+hr {
+  display: block;
+  width: 140px;
+  margin: 20px auto;
+  height: 2px;
+  background-color: red;
+  border: none;
+}
+
+.section__titulo2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.opcao-c {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: auto;
+  gap: 100px;
+  align-items: center;
+}
+
+.opcao__texto {
+  text-align: justify;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 160px;
+  padding: 10px;
+}
+
+.opcao__img {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.img1 {
+  display: block;
+  width: 412.86px;
+  height: 412.86px;
+  background: black;
+  border-radius: 5px;
+}
+
+/**********************************/
+/* 5. Nossos cursos
+/**********************************/
+
+.opcao2 {
+  max-width: 960px;
+  margin: auto;
+}
+
+.opcao2-c {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.opcao2__campo {
+  width: 280px;
+}
+
+.opcao2__img {
+  display: block;
+  width: 280px;
+  height: 280px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.opcao2__titulo {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 10px 0 5px 0;
+  font-weight: 400;
+}
+
+.opcao2__texto {
+  text-align: justify;
+  padding: 0 10px;
+}
+
+/**********************************/
+/* 6. Planos
+/**********************************/
+
+.opcao3 {
+  background-color: var(--clr-light-orange);
+}
+
+.opcao3-c {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: auto;
+  justify-content: center;
+  gap: 20px;
+  align-items: end;
+}
+
+.opcao3__plano {
+  background-color: rgba(255, 255, 255, 0.808);
+  border-radius: 5px;
+  border: 2px solid var(--clr-orange);
+  width: 290px;
+  margin-bottom: 10px;
+}
+
+.opcao3__titulo {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.opcao3__preco {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.opcao3__preco sup {
+  color: rgba(1, 141, 1, 0.623);
+  font-size: 1.5rem;
+}
+
+.opcao3__divisor {
+  background-color: var(--clr-orange);
+  margin: 5px auto;
+  width: 20px;
+}
+
+.opcao3__lista {
+  display: block;
+  text-align: justify;
+  width: 195px;
+  margin: auto;
+  list-style: none;
+}
+
+.opcao3__lista__item::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--clr-red);
+  position: relative;
+  left: -8px;
+  top: 12.5px;
+}
+
+.opcao3__btn {
+  display: block;
+  text-align: center;
+  width: 180px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 15px auto;
+  border: 2px solid var(--clr-red);
+  padding: 2px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.opcao3__btn:hover {
+  background-color: var(--clr-red);
+  box-shadow: 0px 0px 8px 1.5px var(--clr-red);
+}
+
+@media screen and (max-width: 927px) {
+  .opcao3__plano:nth-child(3) {
+    order: -2;
+  }
+  .opcao3__plano:nth-child(2) {
+    order: -1;
+  }
+}
+/**********************************/
+/* 7. Vantagens
+/**********************************/
+
+.opcao4-c {
+  display: flex;
+  max-width: 960px;
+  margin: auto;
+  justify-content: center;
+  gap: 100px;
+}
+
+.opcao4-box {
+  width: 240px;
+  text-align: justify;
+}
+
+.opcao4__titulo {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-left: 10px;
+  margin-bottom: 2px;
+}
+
+.opcao4__titulo::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.opcao4-box:nth-of-type(3n + 1) .opcao4__titulo::before {
+  background-color: var(--clr-orange);
+}
+
+.opcao4-box:nth-of-type(3n + 2) .opcao4__titulo::before {
+  background-color: var(--clr-red);
+}
+
+.opcao4-box:nth-of-type(3n + 3) .opcao4__titulo::before {
+  background-color: rgb(255, 115, 0);
+}
+
+@media screen and (max-width: 785px) {
+  .opcao4-c {
+    display: block;
+  }
+  .opcao4-box {
+    width: 400px;
+    display: block;
+    margin: 15px auto;
+  }
+}
+/**********************************/
+/* 8. Newsletter
+/**********************************/
+
+.xxx {
+  background-color: var(--clr-orange);
+}
+
+.xxx-c {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.xxx__titulo {
+  font-size: 2.62rem;
+  font-weight: bold;
+}
+
+.xxx__texto {
+  font-style: italic;
+}
+
+.xxx__form {
+  flex: 1 -1 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.xxx___input {
+  flex: 3 1 0px;
+  width: 325px;
+  font-size: 1.25rem;
+  font-style: italic;
+  border: 10px solid var(--clr-red);
+  padding: 10px;
+  margin: 0;
+  border-radius: 0;
+  height: 80px;
+}
+
+.xxx__btn {
+  width: 192px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: rgb(255, 212, 132);
+  border: none;
+  padding: 15px;
+  border-left: 3px solid rgba(0, 0, 0, 0.658);
+  height: 80px;
+}
+
+@media screen and (max-width: 467px) {
+  .xxx__btn {
+    display: block;
+    margin: auto;
+    border-left: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .xxx__info {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-bottom: 45px;
+  }
+
+  .xxx__texto {
+    display: none;
+  }
+
+  .xxx-c {
+    padding: 50px calc((100% - 517px) / 2);
+  }
+}
+
+/**********************************/
+/* 9. Footer
+/**********************************/
+
+.footer {
+  background-color: var(--clr-light-orange);
+}
+
+.footer-c {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 960px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.footer__texto a {
+  font-size: 1.2rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(149 114 252),
+    rgb(67 231 173),
+    rgb(226 212 92)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.footer__logo {
+  display: block;
+  width: 185px;
+  height: 40px;
+  background: black;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 510px) {
+  .footer-c {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .footer__logo {
+    margin-bottom: 12px;
+  }
+}
