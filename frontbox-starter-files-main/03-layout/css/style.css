@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -34,12 +36,14 @@
 /**********************************/
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /*""solucao para o problema de 
+  tela não acompanhando o tamanho de telas pequenas*/
 }
 
 body {
   background: white;
   font-family: var(--fonte);
+  overflow-x: hidden;
 }
 
 a {
@@ -70,10 +74,18 @@ p {
 }
 
 .cbc__logo p {
+  font-family: "Rubik Moonrocks", cursive;
+  background-image: linear-gradient(
+    to right,
+    rgb(126, 0, 0),
+    rgb(199, 199, 199) 70%,
+    rgb(255, 255, 255)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2.8rem;
   display: block;
-  width: 185px;
-  height: 40px;
-  background: black;
   border-radius: 5px;
   margin: 10px;
 }
@@ -81,21 +93,39 @@ p {
 .cbc__lista {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 20px;
 }
 
 .cbc__lista__item {
-  padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  border: 1px solid black;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.cbc__lista__item a {
+  display: flex;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
 }
 
 .cbc__lista__item:hover {
-  background-color: rgba(255, 255, 255, 0.603);
+  background-color: black;
+  border: none;
 }
 
-@media screen and (max-width: 590px) {
+.cbc__lista__item:active {
+  background: none;
+}
+
+.cbc__lista__item a:hover {
+  font-weight: bold;
+  color: white;
+}
+
+@media screen and (max-width: 760px) {
   .cbc-c {
     display: flex;
     justify-content: center;
@@ -104,6 +134,13 @@ p {
 
   .cbc__lista {
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cbc__lista__item a {
+    font-size: 0.8rem;
+    padding: 3px 6px;
   }
 }
 
@@ -118,6 +155,18 @@ p {
   font-weight: bold;
 }
 
+.opcao1__titulo1 {
+  background-image: linear-gradient(
+    to right,
+    rgb(64, 0, 255) 10%,
+    rgb(255, 81, 0),
+    rgb(255, 230, 0) 98%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 hr {
   display: block;
   width: 140px;
@@ -130,7 +179,7 @@ hr {
 .section__titulo2 {
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: 400;
 }
 
@@ -139,7 +188,7 @@ hr {
   flex-wrap: wrap;
   max-width: 960px;
   margin: auto;
-  gap: 100px;
+  gap: 70px;
   align-items: center;
 }
 
@@ -148,21 +197,36 @@ hr {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 160px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .opcao__img {
   display: block;
   margin: auto;
-  text-align: center;
 }
 
 .img1 {
-  display: block;
-  width: 412.86px;
-  height: 412.86px;
+  width: 412px;
+  height: 412px;
   background: black;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 850px) {
+  .opcao-c {
+    display: block;
+  }
+
+  .opcao__img {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 580px) {
+    .opcao1__titulo1 {
+      font-size: 2.1rem;
+    }
+  }
 }
 
 /**********************************/
@@ -187,8 +251,8 @@ hr {
 
 .opcao2__img {
   display: block;
-  width: 280px;
-  height: 280px;
+  width: 305px;
+  height: 250px;
   background-color: black;
   border-radius: 5px;
 }
@@ -205,12 +269,20 @@ hr {
   padding: 0 10px;
 }
 
+.opcao2__texto a {
+  color: rgb(111, 111, 252);
+}
+
 /**********************************/
 /* 6. Planos
 /**********************************/
 
 .opcao3 {
-  background-color: var(--clr-light-orange);
+  background-image: url(https://img.freepik.com/vetores-gratis/fundo-branco-de-hexagonos-minimos_79603-1452.jpg?w=1380&t=st=1679650800~exp=1679651400~hmac=14d107d563865491635f6437535e5642d85c56719845bf1652e058e5893bc869);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top top;
 }
 
 .opcao3-c {
@@ -220,22 +292,49 @@ hr {
   margin: auto;
   justify-content: center;
   gap: 20px;
-  align-items: end;
 }
 
 .opcao3__plano {
-  background-color: rgba(255, 255, 255, 0.808);
-  border-radius: 5px;
-  border: 2px solid var(--clr-orange);
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 5px solid rgb(255, 0, 0);
   width: 290px;
   margin-bottom: 10px;
 }
 
-.opcao3__titulo {
+.opcao3__titulo__1,
+.opcao3__titulo__2,
+.opcao3__titulo__3 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 1.9rem;
   font-weight: bold;
-  margin: 10px;
+  margin: 15px;
+}
+
+.opcao3__titulo__1 {
+  background-image: linear-gradient(
+    to right,
+    rgb(11, 135, 205),
+    rgb(49, 195, 246)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.opcao3__titulo__2 {
+  background-image: linear-gradient(to top, rgb(27, 215, 93), rgb(30, 215, 96));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.opcao3__titulo__3 {
+  color: rgb(255, 0, 0);
+}
+
+.opcao3__titulo__3 span {
+  color: black;
 }
 
 .opcao3__preco {
@@ -245,9 +344,17 @@ hr {
   font-weight: bold;
 }
 
-.opcao3__preco sup {
+.sup1 {
   color: rgba(1, 141, 1, 0.623);
   font-size: 1.5rem;
+}
+
+.sup2 {
+  display: block;
+  position: relative;
+  top: 35px;
+  font-size: 1rem;
+  margin-left: 5px;
 }
 
 .opcao3__divisor {
@@ -258,7 +365,6 @@ hr {
 
 .opcao3__lista {
   display: block;
-  text-align: justify;
   width: 195px;
   margin: auto;
   list-style: none;
@@ -276,9 +382,11 @@ hr {
   top: 12.5px;
 }
 
-.opcao3__btn {
-  display: block;
-  text-align: center;
+.opcao3__btn__1,
+.opcao3__btn__2,
+.opcao3__btn__3 {
+  display: flex;
+  justify-content: center;
   width: 180px;
   font-size: 2rem;
   font-weight: bold;
@@ -287,11 +395,79 @@ hr {
   padding: 2px;
   border-radius: 5px;
   text-transform: uppercase;
+  transition: 0.25s;
 }
 
-.opcao3__btn:hover {
-  background-color: var(--clr-red);
-  box-shadow: 0px 0px 8px 1.5px var(--clr-red);
+.opcao3__btn__1 {
+  background-image: linear-gradient(
+    to right,
+    rgb(11, 135, 205),
+    rgb(49, 195, 246)
+  );
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.opcao3__btn__1:active {
+  border: 2px solid rgb(132, 132, 255);
+  background-image: none;
+  background-image: linear-gradient(
+    to right,
+    rgb(11, 135, 205),
+    rgb(49, 195, 246)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.opcao3__btn__1:hover {
+  box-shadow: 0 0 15px 1px rgb(157, 157, 255);
+}
+
+.opcao3__btn__2 {
+  background-image: linear-gradient(to top, rgb(27, 215, 93), rgb(30, 215, 96));
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.opcao3__btn__2:active {
+  border: 2px solid rgb(107, 255, 102);
+  background-image: none;
+  background-image: linear-gradient(
+    to top,
+    rgb(27, 215, 93),
+    rgb(30, 215, 96) 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.opcao3__btn__2:hover {
+  box-shadow: 0 0 15px 1px rgb(132, 255, 132);
+}
+
+.opcao3__btn__3 {
+  background-color: rgb(255, 0, 0);
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.opcao3__btn__3:active {
+  border: 2px solid rgb(255, 0, 0);
+  background-image: none;
+  background: rgb(255, 0, 0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.opcao3__btn__3:hover {
+  box-shadow: 0 0 15px 1px rgb(255, 123, 123);
 }
 
 @media screen and (max-width: 927px) {
@@ -300,6 +476,11 @@ hr {
   }
   .opcao3__plano:nth-child(2) {
     order: -1;
+  }
+
+  .opcao3__btn__1 {
+    position: relative;
+    top: 0%;
   }
 }
 /**********************************/
@@ -311,11 +492,12 @@ hr {
   max-width: 960px;
   margin: auto;
   justify-content: center;
-  gap: 100px;
+  gap: 40px;
+  padding: 0 20px;
 }
 
 .opcao4-box {
-  width: 240px;
+  width: 400px;
   text-align: justify;
 }
 
@@ -335,18 +517,22 @@ hr {
 }
 
 .opcao4-box:nth-of-type(3n + 1) .opcao4__titulo::before {
-  background-color: var(--clr-orange);
+  background-color: rgb(255, 129, 12);
 }
 
 .opcao4-box:nth-of-type(3n + 2) .opcao4__titulo::before {
-  background-color: var(--clr-red);
+  background-color: rgb(247, 247, 0);
 }
 
 .opcao4-box:nth-of-type(3n + 3) .opcao4__titulo::before {
-  background-color: rgb(255, 115, 0);
+  background-color: rgb(1, 1, 184);
 }
 
-@media screen and (max-width: 785px) {
+.material-symbols-outlined {
+  color: rgb(255, 103, 103);
+}
+
+@media screen and (max-width: 800px) {
   .opcao4-c {
     display: block;
   }
@@ -369,13 +555,13 @@ hr {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 0;
+  padding: 25px 0;
   justify-content: space-between;
   align-items: center;
 }
 
 .xxx__titulo {
-  font-size: 2.62rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -394,34 +580,47 @@ hr {
   width: 325px;
   font-size: 1.25rem;
   font-style: italic;
-  border: 10px solid var(--clr-red);
+  border: 5px solid var(--clr-red);
   padding: 10px;
   margin: 0;
   border-radius: 0;
-  height: 80px;
+  height: 60px;
 }
 
 .xxx__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 192px;
   font-size: 2.25rem;
   font-weight: bold;
   text-transform: uppercase;
   background: rgb(255, 212, 132);
   border: none;
-  padding: 15px;
   border-left: 3px solid rgba(0, 0, 0, 0.658);
-  height: 80px;
+  height: 60px;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 467px) {
+.xxx__btn:hover {
+  box-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+
+.xxx__btn:active {
+  background-color: transparent;
+  transition: 0.1s;
+}
+
+@media screen and (max-width: 380px) {
   .xxx__btn {
     display: block;
+    text-align: center;
     margin: auto;
     border-left: none;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 918px) {
   .xxx__info {
     position: relative;
     left: 50%;
@@ -453,7 +652,11 @@ hr {
   max-width: 960px;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
+  padding: 30px 12px;
+}
+
+.footer__texto span {
+  color: rgb(0, 255, 187);
 }
 
 .footer__texto a {
@@ -470,14 +673,23 @@ hr {
 }
 
 .footer__logo {
+  font-family: "Rubik Moonrocks", cursive;
+  background-image: linear-gradient(
+    to right,
+    rgb(126, 0, 0),
+    rgb(199, 199, 199) 70%,
+    rgb(255, 255, 255)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2.8rem;
   display: block;
-  width: 185px;
-  height: 40px;
-  background: black;
   border-radius: 5px;
+  margin: 10px;
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 560px) {
   .footer-c {
     display: flex;
     flex-direction: column-reverse;
