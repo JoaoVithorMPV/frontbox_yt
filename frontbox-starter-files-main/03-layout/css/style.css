@@ -36,7 +36,8 @@
 /**********************************/
 
 html {
-  scroll-behavior: smooth; /*""solucao para o problema de 
+  scroll-behavior: smooth;
+  /*""solucao para o problema de 
   tela não acompanhando o tamanho de telas pequenas*/
 }
 
@@ -144,6 +145,16 @@ p {
   }
 }
 
+@media screen and (max-width: 370px) {
+  .cbc__lista__item a {
+    font-size: 0.9rem;
+  }
+
+  .cbc__lista {
+    gap: 5.8px;
+  }
+}
+
 /**********************************/
 /* 4. Quem somos
 /**********************************/
@@ -225,6 +236,20 @@ hr {
   @media screen and (max-width: 580px) {
     .opcao1__titulo1 {
       font-size: 2.1rem;
+    }
+  }
+
+  @media screen and (max-width: 412px) {
+    .img1 {
+      width: 90vw;
+      height: 50vh;
+    }
+  }
+
+  @media screen and (max-width: 376px) {
+    .img1 {
+      width: 90vw;
+      height: 43vh;
     }
   }
 }
@@ -541,6 +566,14 @@ hr {
     display: block;
     margin: 15px auto;
   }
+
+  @media screen and (max-width: 420px) {
+    .opcao4-box {
+      width: 85vw; /*possivel solucionador do problema "barra branca"
+      junto da alteração na imagem do setor "musica geek"*/
+      text-align: justify;
+    }
+  }
 }
 /**********************************/
 /* 8. Newsletter
@@ -611,7 +644,7 @@ hr {
   transition: 0.1s;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 457px) {
   .xxx__btn {
     display: block;
     text-align: center;
